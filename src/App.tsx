@@ -8,6 +8,7 @@ export default function App() {
       <Routes>
         <Route element={<ErrorPage />} path="*"></Route>
         <Route element={<LoginPage />} path="/"></Route>
+        <Route element={<LoginPage />} path="/home"></Route>
       </Routes>
     </BrowserRouter>
   );
