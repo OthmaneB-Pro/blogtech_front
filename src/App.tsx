@@ -1,24 +1,16 @@
-import React from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LoginPage from "./components/pages/login/LoginPage";
+import ErrorPage from "./components/pages/error/ErrorPage";
+import HomePage from "./components/pages/home/HomePage";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<ErrorPage />} path="*"></Route>
+        <Route element={<LoginPage />} path="/"></Route>
+        <Route element={<HomePage />} path="/home"></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
