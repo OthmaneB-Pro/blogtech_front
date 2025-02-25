@@ -5,7 +5,9 @@ export default function HomePage() {
   const navigate = useNavigate();
   return (
     <div>
-      
+      <nav>
+        <button onClick={() => {navigate("/")}}>Deconnexion</button>
+      </nav>
       <div>Article :</div>
 
       <ArticleStyled>
