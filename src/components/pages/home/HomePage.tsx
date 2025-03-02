@@ -8,13 +8,25 @@ export default function HomePage() {
   return (
     <div>
       <nav>
-        <button onClick={() => {navigate("/")}}>Deconnexion</button>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Deconnexion
+        </button>
       </nav>
-      <div>Article :</div>
+      <h2>Les différents articles publiées :</h2>
 
       <ArticleStyled>
         {cardValues.map((card) => (
-          <Card key={card.date} title={card.title} content={card.content} author={card.author} date={card.date} />
+          <Card
+            key={card.date}
+            title={card.title}
+            content={card.content}
+            author={card.author}
+            date={card.date}
+          />
         ))}
       </ArticleStyled>
     </div>
@@ -25,5 +37,5 @@ const ArticleStyled = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 30px;
-
-`
+  margin-left : 30px;
+`;
