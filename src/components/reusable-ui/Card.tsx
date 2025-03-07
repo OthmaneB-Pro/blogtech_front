@@ -12,7 +12,6 @@ export default function Card({ title, content, author, date }: CardType) {
     <CardStyled>
       <div className="content">
         <img src="./img/article.jpg" alt="article" />
-
         <h1>{title}</h1>
         <p>{content}</p>
         <button>Lire la suite</button>
