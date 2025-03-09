@@ -58,5 +58,11 @@ const CardStyled = styled.div`
     border-radius: 24px;
     font-size: 16px;
     margin-bottom: 10px;
+
+    &:hover{
+      transition: 0.2s;
+      background-color: #353535;
+      cursor: pointer;
+    }
   }
 `;
