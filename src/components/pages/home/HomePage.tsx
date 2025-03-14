@@ -22,6 +22,12 @@ export default function HomePage() {
       </BarStyled>
       <h1>Lecture</h1>
 
+      <select>
+        <option value="auteur">Auteur</option>
+        <option value="latestDate">Le plus récent</option>
+        <option value="oldestDate">Le plus ancien</option>
+      </select>
+
       <ArticleStyled>
         {cardValues.map((card) => (
           <Card
